@@ -9,11 +9,13 @@ import pages.HomePage;
 import java.util.List;
 
 public class BaseTests {
-    /* Go to our test site, the-internet, and use the findElement and findElements to complete the following scenario.
+    /* Exercise 1:
 
-Click on the “Shifting Content” link.
-Then click on the first example Menu Element.
-Then print how many of these menu elements appear.
+    Go to our test site, the-internet, and use the findElement and findElements to complete the following scenario.
+
+    Click on the “Shifting Content” link.
+    Then click on the first example Menu Element.
+    Then print how many of these menu elements appear.
 
      */
 

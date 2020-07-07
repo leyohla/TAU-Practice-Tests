@@ -20,8 +20,8 @@ public class LoginPage {
     public void setPassword(String password){
         driver.findElement(passwordField).sendKeys(password);
     }
-    public verificationPage clickLoginBtn(){
+    public VerificationPage clickLoginBtn(){
         driver.findElement(loginBtn).click();
-        return new verificationPage(driver);
+        return new VerificationPage(driver);
     }
 }
