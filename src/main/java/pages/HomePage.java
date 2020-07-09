@@ -17,4 +17,6 @@ public class HomePage {
         driver.findElement(formAuthentication).click();
         return new LoginPage(driver);
     }
+
+    
 }
