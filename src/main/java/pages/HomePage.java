@@ -33,4 +33,8 @@ public class HomePage {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
     }
+    public SliderPage clickSlider(){
+        clickLink("Horizontal Slider");
+        return new SliderPage(driver);
+    }
 }
