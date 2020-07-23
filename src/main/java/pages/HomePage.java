@@ -37,4 +37,8 @@ public class HomePage {
         clickLink("Horizontal Slider");
         return new SliderPage(driver);
     }
+    public AlertsPage clickAlert(){
+        clickLink("JavaScript Alerts");
+        return new AlertsPage(driver);
+    }
 }
