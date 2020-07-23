@@ -1,12 +1,15 @@
 package alerts;
 
 import base.BaseTests;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.AlertsPage;
+import pages.HomePage;
 
 import static org.testng.Assert.assertEquals;
 
 public class AlertsTests extends BaseTests {
+
     @Test
     public void testJSAlertsPage(){
         var alertsPage = homePage.clickAlert();
