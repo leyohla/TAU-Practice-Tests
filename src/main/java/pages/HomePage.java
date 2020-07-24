@@ -15,7 +15,6 @@ public class HomePage {
         clickLink("Form Authentication");
         return new LoginPage(driver);
     }
-
     public DropDownPage clickDropDown(){
         clickLink("Dropdown");
         return new DropDownPage(driver);
@@ -48,5 +47,9 @@ public class HomePage {
     public ContextMenuPage clickContextMenu(){
         clickLink("Context Menu");
         return new ContextMenuPage(driver);
+    }
+    public FramesPage clickWYSIWYGEditor(){
+        clickLink("WYSIWYG Editor");
+        return new FramesPage(driver);
     }
 }
