@@ -52,4 +52,8 @@ public class HomePage {
         clickLink("WYSIWYG Editor");
         return new FramesPage(driver);
     }
+    public NestedFramesPage clickNestedFrames(){
+        clickLink("Frames");
+        return new NestedFramesPage(driver);
+    }
 }
