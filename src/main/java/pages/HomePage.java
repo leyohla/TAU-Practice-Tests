@@ -56,4 +56,8 @@ public class HomePage {
         clickLink("Frames");
         return new NestedFramesPage(driver);
     }
+    public WaitsPage clickDynamicLoading(){
+        clickLink("Dynamic Loading");
+        return new WaitsPage(driver);
+    }
 }
