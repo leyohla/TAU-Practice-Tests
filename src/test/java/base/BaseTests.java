@@ -8,6 +8,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.WindowsManager;
 
 import java.util.List;
 
@@ -64,4 +65,7 @@ public class BaseTests {
         test.setUp();
         test.tearDown();
     }*/
+    public WindowsManager getNewWindowManager(){
+        return new WindowsManager(driver);
+    }
 }

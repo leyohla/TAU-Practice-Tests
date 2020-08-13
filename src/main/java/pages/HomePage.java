@@ -60,4 +60,8 @@ public class HomePage {
         clickLink("Dynamic Loading");
         return new WaitsPage(driver);
     }
+    public MultipleWindowsPage clickMultipleWindows(){
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
 }
