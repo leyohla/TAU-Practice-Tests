@@ -31,4 +31,5 @@ public class WaitsPage {
     public String getLoadedText(){
         return driver.findElement(textAfterLoad).getText();
     }
+
 }
