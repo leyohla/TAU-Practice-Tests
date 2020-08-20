@@ -107,7 +107,6 @@ public class BaseTests {
     private void setCookie(){
         Cookie cookie = new Cookie.Builder("tau", "123").domain("the-internet.herokuapp.com").build();
 
-        //driver.manage().deleteAllCookies();
         Set cookies = driver.manage().getCookies();
         System.out.print("Cookies found: " + cookies);
     }
