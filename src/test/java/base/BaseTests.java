@@ -3,6 +3,7 @@ package base;
 import com.google.common.io.Files;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.ITest;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -14,7 +15,9 @@ import utils.WindowsManager;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.CookieHandler;
 import java.util.List;
+import java.util.Set;
 
 public class BaseTests {
     /* Exercise 1:
@@ -34,8 +37,10 @@ public class BaseTests {
     @BeforeClass
     public void setUp(){
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(getChromeOptions());
         goHome();
+        deleteCookies();
+        //setCookie();
         System.out.println(driver.getTitle());
         driver.manage().window().maximize();
 
@@ -90,5 +95,28 @@ public class BaseTests {
 
     public WindowsManager getNewWindowManager(){
         return new WindowsManager(driver);
+    }
+
+    public ChromeOptions getChromeOptions(){
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("disable-infobars");
+        //options.setHeadless(true);
+        return options;
+    }
+
+    private void setCookie(){
+        Cookie cookie = new Cookie.Builder("tau", "123").domain("the-internet.herokuapp.com").build();
+
+        //driver.manage().deleteAllCookies();
+        Set cookies = driver.manage().getCookies();
+        System.out.print("Cookies found: " + cookies);
+    }
+    private void deleteCookies(){
+
+        //driver.manage().deleteCookieNamed("optimizelyBuckets");
+        driver.manage().deleteAllCookies();
+        Set cookies = driver.manage().getCookies();
+        System.out.print(cookies);
+
     }
 }
